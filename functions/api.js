@@ -2,6 +2,7 @@ const express = require("express");
 const serverless = require("serverless-http");
 const app = express();
 const router = express.Router();
+const ytdl = require('@distube/ytdl-core')
 
 router.get("/", (req, res) => {
   res.send("KOMA App is running..");
@@ -34,7 +35,7 @@ router.get("/demo", (req, res) => {
 
 
 
-app.post("/download", async (req, res) => {
+router.post("/download", async (req, res) => {
   try {
     const videoUrl = req.body.videoURL;
 
