@@ -35,7 +35,7 @@ router.get("/demo", (req, res) => {
 
 
 
-router.post("/download", async (req, res) => {
+router.get("/download", async (req, res) => {
   try {
     const videoUrl = req.body.videoURL;
 
